@@ -1,0 +1,6 @@
+export { default as AboutHeroSection } from './AboutHeroSection'
+export { default as AboutInfoSection } from './AboutInfoSection'
+export { default as AboutMissionSection } from './AboutMissionSection'
+export { default as AboutTeamSection } from './AboutTeamSection'
+export { default as AboutFaqSection } from './AboutFaqSection'
+export { default as AboutContactSection } from './AboutContactSection'

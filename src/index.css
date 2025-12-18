@@ -1,0 +1,244 @@
+/* @import 'tailwindcss'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Font - Instrument Sans */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* ============================================
+   HIRNA - Variables CSS Globales
+   ============================================ */
+:root {
+  /* Couleurs principales */
+  --hirna-orange: #c76e1e;
+  --hirna-dark: #100f20;
+  --hirna-purple: #433f86;
+  --hirna-green: #31c247;
+  --hirna-navy: #191536;
+  --hirna-gray: #949494;
+
+  /* Gradients */
+  --gradient-lr: linear-gradient(to right, #100f20, #433f86);
+  --gradient-tb: linear-gradient(to bottom, #433f86, #100f20);
+  --gradient-navy-orange: linear-gradient(to bottom, #191536, #c76e1e);
+
+  /* Typography */
+  --font-primary: 'Instrument Sans', sans-serif;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--hirna-dark);
+  color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Utility Classes HIRNA
+   ============================================ */
+.bg-gradient-lr {
+  background: var(--gradient-lr);
+}
+
+.bg-gradient-tb {
+  background: var(--gradient-tb);
+}
+
+.bg-gradient-navy-orange {
+  background: var(--gradient-navy-orange);
+}
+
+.text-hirna-orange {
+  color: var(--hirna-orange);
+}
+
+.text-hirna-green {
+  color: var(--hirna-green);
+}
+
+.text-hirna-gray {
+  color: var(--hirna-gray);
+}
+
+.bg-hirna-dark {
+  background-color: var(--hirna-dark);
+}
+
+.bg-hirna-navy {
+  background-color: var(--hirna-navy);
+}
+
+.bg-hirna-purple {
+  background-color: var(--hirna-purple);
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+.btn-primary {
+  background-color: var(--hirna-orange);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #a85a18;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--hirna-orange);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--hirna-orange);
+}
+
+.btn-success {
+  background-color: var(--hirna-green);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #28a83d;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
+.card {
+  background-color: var(--hirna-navy);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-gradient {
+  background: var(--gradient-tb);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* ============================================
+   Scrollbar Styles
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hirna-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hirna-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hirna-orange);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* ============================================
+   Responsive Breakpoints Reference
+   sm: 640px
+   md: 768px
+   lg: 1024px
+   xl: 1280px
+   2xl: 1536px
+   ============================================ */

@@ -1,70 +1,41 @@
 import React from 'react'
+import SchoolHeaderCard from '../SchoolHeaderCard'
 
 const SchoolDetailHeroSection = () => {
+  // 1. Définition des variables avec tes vraies données
+  const schoolData = {
+    name: 'Ghana university',
+    tags: 'Santé, Ingénierie, Médecine, Technologies',
+    location: 'ACCRA, Ghana',
+    website: 'www.ghanauniversity',
+    cover: '/images/formation.png',
+    logo: '/images/formation.png',
+    socials: {
+      linkedin: 'https://linkedin.com/school/ghana-uni',
+      facebook: 'https://facebook.com/ghana-uni',
+      instagram: 'https://instagram.com/ghana-uni',
+    },
+  }
+
   return (
-    <section className="bg-[#100F20] min-h-screen font-['Instrument_Sans']">
-      {/* 1. Header & Couverture - Sans Radius */}
-      <div className='relative w-full h-[300px] md:h-[400px]'>
-        <img
-          src='/images/formation.png'
-          alt='Couverture'
-          className='w-full h-full object-cover'
-        />
-        <div className='absolute inset-0 bg-black/30'></div>
-      </div>
+    <section className="bg-[#100F20] min-h-screen font-['Instrument_Sans'] pb-20">
+      {/* UTILISATION DU COMPOSANT CARD (Remplace les anciens points 1 et 2) */}
+      <SchoolHeaderCard
+        schoolName={schoolData.name}
+        tags={schoolData.tags}
+        location={schoolData.location}
+        website={schoolData.website}
+        coverImage={schoolData.cover}
+        logo={schoolData.logo}
+        socialLinks={schoolData.socials}
+      />
 
-      {/* 2. Profil & Infos Principales */}
-      <div className='max-w-6xl mx-auto px-4 -mt-16 relative z-10'>
-        <div className='flex flex-col md:flex-row items-end gap-6 mb-8 text-white'>
-          {/* Logo Profile - Sans Radius */}
-          <div className='bg-white p-2 rounded-xl shadow-2xl'>
-            <img
-              src='/images/formation.png'
-              alt='Logo'
-              className='w-32 h-32 md:w-40 md:h-40 object-cover'
-            />
-          </div>
-
-          <div className='flex-1 pb-4'>
-            <div className='flex flex-wrap items-center gap-4 mb-2'>
-              <h1 className='text-3xl md:text-5xl font-bold'>
-                Ghana university
-              </h1>
-              <span className='bg-[#c76e1e] text-white text-[10px] md:text-xs px-3 py-1 rounded-md font-medium uppercase'>
-                Santé, Ingénierie, Médecine, Technologies
-              </span>
-            </div>
-
-            <div className='flex flex-wrap items-center gap-6 text-sm'>
-              <span className='flex items-center gap-2'>
-                <i className='fa-solid fa-location-dot text-[#c76e1e]'></i>{' '}
-                ACCRA, Ghana
-              </span>
-              <a
-                href='#'
-                className='flex items-center gap-2 hover:text-[#c76e1e] transition-colors'
-              >
-                <i className='fa-solid fa-globe text-[#c76e1e]'></i>{' '}
-                www.ghanauniversity
-              </a>
-              <div className='flex items-center gap-3'>
-                <span className='opacity-70'>Nous suivre</span>
-                <div className='flex gap-2'>
-                  <i className='fa-brands fa-linkedin text-[#c76e1e] cursor-pointer'></i>
-                  <i className='fa-brands fa-facebook text-[#c76e1e] cursor-pointer'></i>
-                  <i className='fa-brands fa-instagram text-[#c76e1e] cursor-pointer'></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 3. Bloc de Contenu (Carte Navy) */}
+      {/* 3. Bloc de Contenu (Carte Navy) - Conservé tel quel */}
+      <div className='max-w-6xl mx-auto px-4 relative z-10'>
         <div className='bg-[#191536] rounded-3xl p-6 md:p-10 shadow-xl border border-white/5'>
           <div className='grid grid-cols-1 lg:grid-cols-12 gap-10'>
             {/* Colonne Gauche: Galerie & Points Forts */}
             <div className='lg:col-span-5 grid grid-cols-2 gap-2'>
-              {/* Image principale haut */}
               <div className='col-span-2 overflow-hidden h-64'>
                 <img
                   src='/images/formation.png'
@@ -73,7 +44,6 @@ const SchoolDetailHeroSection = () => {
                 />
               </div>
 
-              {/* Colonne des 3 images à gauche */}
               <div className='flex flex-col gap-2'>
                 <div className='overflow-hidden h-32'>
                   <img
@@ -98,13 +68,12 @@ const SchoolDetailHeroSection = () => {
                 </div>
               </div>
 
-              {/* BLOC POINTS FORTS - S'étend verticalement */}
+              {/* BLOC POINTS FORTS */}
               <div className='bg-[#c76e1e] p-4 flex flex-col gap-4 text-white h-full'>
                 <h4 className='text-center font-bold text-lg text-black uppercase tracking-widest'>
                   Points forts
                 </h4>
 
-                {/* Compartiment +03 - Campus Modernes */}
                 <div className='border border-black p-3 flex-1 flex flex-col justify-center'>
                   <span className='text-5xl font-extrabold block text-black mb-2 text-center'>
                     +03
@@ -122,7 +91,6 @@ const SchoolDetailHeroSection = () => {
                   </ul>
                 </div>
 
-                {/* Compartiment +02 - Langues */}
                 <div className='border border-black p-3 flex-1 flex flex-col justify-center'>
                   <span className='text-5xl font-extrabold block text-black mb-2 text-center'>
                     +02
@@ -155,10 +123,7 @@ const SchoolDetailHeroSection = () => {
                   </h3>
                   <p className='text-white/80 text-sm leading-relaxed'>
                     "The University of Ghana is the oldest and largest of the
-                    thirteen Ghanaian national public universities. It was
-                    founded in 1948, in the British colony of the Gold Coast, as
-                    the University College of the Gold Coast, and was originally
-                    an affiliate college of the University."
+                    thirteen Ghanaian national public universities..."
                   </p>
                 </section>
 
@@ -167,9 +132,8 @@ const SchoolDetailHeroSection = () => {
                     Missions
                   </h3>
                   <p className='text-white/80 text-sm leading-relaxed'>
-                    "The University of Ghana is the oldest and largest of the
-                    thirteen Ghanaian national public universities. It was
-                    founded in 1948."
+                    "The University of Ghana is the oldest and largest founded
+                    in 1948."
                   </p>
                 </section>
 
@@ -189,7 +153,6 @@ const SchoolDetailHeroSection = () => {
                   </ul>
                 </section>
 
-                {/* Footer Actions */}
                 <div className='mt-12 flex flex-wrap items-center gap-4 border-t border-white/10 pt-8'>
                   <button className='bg-white text-black px-8 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-[#c76e1e] hover:text-white transition-all duration-300'>
                     Nous Contacter <i className='fa-solid fa-arrow-right'></i>

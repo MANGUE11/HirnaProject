@@ -5,13 +5,13 @@ import PremiumAbonnementComponentStep from '../components/premiumPaiement/Premiu
 const PremiumAbonnementStep = () => {
   return (
     <div className='min-h-screen bg-[#100F20]'>
-      <Header />
+      {/* <Header /> */}
       <main>
         {/* Autres sections de la page Bourse à ajouter ici */}
 
         <PremiumAbonnementComponentStep />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

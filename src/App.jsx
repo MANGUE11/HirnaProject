@@ -17,6 +17,7 @@ import RessourcesDetail from './pages/RessourcesDetail'
 import PremiumAbonnement from './pages/PremiumAbonnement'
 import PremiumAbonnementStep from './pages/PremiumAbonnementStep'
 import PremiumDashboard from './pages/PremiumDashboard'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
           path='/premiumAbonnementStep'
           element={<PremiumAbonnementStep />}
         />
-        <Route path='/premiumDashboard' element={<PremiumDashboard />} />
+        <Route path='/premiumDashboard' element={<PremiumDashboard />} />{' '}
+        <Route path='/AdminPage' element={<AdminPage />} />
       </Routes>
     </Router>
   )

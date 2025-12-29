@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Footer } from '../components'
+import { Header, Footer, CommencezCard } from '../components'
 import RessourcesDetailHeroComponent from '../components/ressourcesDetail/ressourcesDetailHeroComponent'
 import SimilarResourcesComponent from '../components/ressourcesDetail/SimilarResourcesComponent'
 
@@ -11,6 +11,7 @@ const RessoursesDetail = () => {
         <RessourcesDetailHeroComponent />
         {/* Autres sections de la page Bourse à ajouter ici */}
         <SimilarResourcesComponent />
+        <CommencezCard />
       </main>
       <Footer />
     </div>

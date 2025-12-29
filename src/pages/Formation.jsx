@@ -5,7 +5,7 @@ import {
   FormationListSection,
 } from '../components/formation'
 
-const FormationBourse = () => {
+const Formation = () => {
   return (
     <div className='min-h-screen bg-[#100F20]'>
       <Header />
@@ -19,4 +19,4 @@ const FormationBourse = () => {
   )
 }
 
-export default FormationBourse
+export default Formation

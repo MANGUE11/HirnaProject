@@ -18,6 +18,9 @@ import PremiumAbonnement from './pages/PremiumAbonnement'
 import PremiumAbonnementStep from './pages/PremiumAbonnementStep'
 import PremiumDashboard from './pages/PremiumDashboard'
 import AdminPage from './pages/AdminPage'
+import InscriptionPage from './pages/InscriptionPage'
+import InscriptionEtudiantPage from './pages/InscriptionEtudiantPage'
+import EtudiantProfilePage from './pages/EtudiantProfilePage'
 
 function App() {
   return (
@@ -47,7 +50,13 @@ function App() {
           element={<PremiumAbonnementStep />}
         />
         <Route path='/premiumDashboard' element={<PremiumDashboard />} />{' '}
-        <Route path='/AdminPage' element={<AdminPage />} />
+        <Route path='/AdminPage' element={<AdminPage />} />{' '}
+        <Route path='/inscription' element={<InscriptionPage />} />{' '}
+        <Route
+          path='/inscriptionetudiant'
+          element={<InscriptionEtudiantPage />}
+        />{' '}
+        <Route path='/EtudiantProfilePage' element={<EtudiantProfilePage />} />{' '}
       </Routes>
     </Router>
   )

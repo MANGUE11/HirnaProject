@@ -2,6 +2,13 @@ import React, { useState } from 'react'
 import { Header, Footer } from '../components'
 import EtudiantSideBarreComponent from '../components/profileEtudiant/EtudiantSideBarreComponent'
 import ProfilCandidatComponent from '../components/profileEtudiant/ProfilCandidatComponent'
+import DashBoardCandidatComponent from '../components/profileEtudiant/DashBoardCandidatComponent'
+import EtudiantCandidature from '../components/profileEtudiant/EtudiantCandidature'
+import EtudiantFavoritComponent from '../components/profileEtudiant/EtudiantFavoritComponent'
+import MessageEtudiant from '../components/profileEtudiant/MessageEtudiant'
+import AmbassadeurEtudiant from '../components/profileEtudiant/AmbassadeurEtudiant'
+import EtudiantNotification from '../components/profileEtudiant/EtudiantNotification'
+import ParamettreEtudiantComponent from '../components/profileEtudiant/ParamettreEtudiantComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faSearch,
@@ -69,19 +76,49 @@ const EtudiantProfilePage = () => {
         return (
           <>
             <TopBar />
-            <h2 className='text-2xl font-bold mb-2 text-white'>
-              Mon Tableau de bord
-            </h2>
-            <p className='text-gray-400'>
-              Bienvenue, Aminata ! Voici un aperçu de votre activité.
-            </p>
+            <DashBoardCandidatComponent />
           </>
         )
       case 'candidatures':
         return (
           <>
             <TopBar />
-            <h2 className='text-2xl font-bold text-white'>Mes Candidatures</h2>
+            <EtudiantCandidature />
+          </>
+        )
+      case 'favoris':
+        return (
+          <>
+            <TopBar />
+            <EtudiantFavoritComponent />
+          </>
+        )
+      case 'messages':
+        return (
+          <>
+            <TopBar />
+            <MessageEtudiant />
+          </>
+        )
+      case 'ambassadeurs':
+        return (
+          <>
+            <TopBar />
+            <AmbassadeurEtudiant />
+          </>
+        )
+      case 'parametres':
+        return (
+          <>
+            <TopBar />
+            <ParamettreEtudiantComponent />
+          </>
+        )
+      case 'notifications':
+        return (
+          <>
+            <TopBar />
+            <EtudiantNotification />
           </>
         )
       default:
